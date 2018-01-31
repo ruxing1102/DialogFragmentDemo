@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomDialogShowTypeOne" parent="AlertDialog.AppCompat.Light">
+        <!--设置背景透明-->
+        <item name="android:windowBackground">@color/color_transparent</item>
+        <!--背景是否透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--是否没有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮在window上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否背景模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="CustomDialogShowTypeTwo" parent="CustomDialogShowTypeOne">
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimType</item>
+    </style>
+
+    <style name="CustomDialogAnimType" parent="AlertDialog.AppCompat.Light">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_dialog_exit</item>
+    </style>
+
 </resources>
